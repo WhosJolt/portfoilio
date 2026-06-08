@@ -1,0 +1,95 @@
+/*
+ADD
+BETTER COLOR SCHEME
+HAMBURGER MENU
+BETTER FONT
+GOOD FONT SIZES AND DESIGN
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #111;
+    font-family: sans-serif;
+}
+header{
+    width: 100%;
+    color:rgb(225, 225, 225);
+    background-color: rgb(67, 99, 71);
+}
+#name{
+    padding-left: 20px;
+}
+nav{
+    align-items:center;
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    padding-right: 40px;
+    flex-wrap: wrap; /* TMEPRORAY RESPONSIVENESS FIX */
+}
+/* 
+ADD HAMBURGER MENU AND CORRECT DIMENSIONS NA DSTUTF
+*/
+nav a{
+    text-decoration: none;
+    position: relative;
+    padding: 10px 20px;
+    color:rgb(225, 225, 225); 
+}
+nav a::after{
+    content: "";
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+    width: 0%;    
+    height: 3px;
+    background: rgb(120, 170, 130);
+    transition: width 0.4s ease;
+}
+nav a:hover::after{
+    width: 75%;
+}
+/* 
+hero seciotn stuff  here
+*/
+footer{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: black;
+    padding: 20px 40px;
+}
+#footerSection{
+    display: flex;
+    justify-content: right;
+    margin: 0 auto;
+}
+@media (min-width: 1500px){
+    #footerSection{
+        max-width:70%
+    }
+}
+#socials p{
+    color: white;
+}
+#socials ul{
+    list-style: none;
+    display: flex;
+    align-items: center; 
+}
+.socialIcon{
+    text-decoration: none;
+    color: white;
+    font-size:24px;
+    display: inline-block;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.socialIcon:hover{
+    color: rgb(67, 99, 71);
+    transform: translateY(-5px)
+}
